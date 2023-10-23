@@ -33,6 +33,8 @@ class KakaoLoginView extends StatelessWidget {
             ElevatedButton(onPressed: () async{
 
               await kakaoModel.login();
+
+              print(kakaoModel.user);
               print(kakaoModel.user?.kakaoAccount?.email);
               String? kemail = kakaoModel.user?.kakaoAccount?.email;
               ka.changeEmail(kemail!);
